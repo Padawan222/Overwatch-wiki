@@ -6,90 +6,124 @@
 .grid-container {
   display: grid;
   grid:
-    "menu header" auto
-    "menu coco"
-    "menu coco"
+    "menu header" 7.7rem
+    "menu img" auto
+    "contact coco" auto
     / 20rem auto;
-}
 
-header {
-  grid-area: header;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background: linear-gradient(to right, var(--orange_01), var(--orange_02));
-  font-family: var(--font-title);
-  div {
+  header {
+    height: 7.7rem;
+    grid-area: header;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(to right, var(--orange_01), var(--orange_02));
+    font-family: var(--font-title);
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-    h2 {
-      letter-spacing: 1rem;
-      margin-left: 2rem;
-      font-weight: 300;
-      font-size: 4rem;
-      color: white;
-    }
-    span {
-      margin-right: 1rem;
-      button {
-        margin: 0 0.5rem;
-        height: 3rem;
-        width: 11rem;
-        border: none;
-        border-radius: 12%;
-        background: var(--orange_02);
-        font-size: 2rem;
-        &:hover {
-          background: #f1c40f;
-        }
-        a {
+      h2 {
+        letter-spacing: 1rem;
+        margin-left: 2rem;
+        font-weight: 300;
+        font-size: 4rem;
+        color: white;
+      }
+      span {
+        margin-right: 1rem;
+        button {
+          margin: 0 0.5rem;
+          height: 3rem;
+          width: 11rem;
+          border: none;
+          border-radius: 12%;
+          background: none;
+          font-size: 2rem;
           &:hover {
-            color: white;
+            text-decoration: underline;
+            background: none;
+          }
+          a {
+            &:hover {
+              transition: all 0.2;
+              font-size: 2.2rem;
+            }
           }
         }
       }
     }
   }
-}
 
-// .img_01 {
-//   height: rem;
-//   background: url(../img/img_02.jpg) center no-repeat;
-//   background-size: cover;
-//   grid-area: img;
-// }
-.menu {
-  min-height: 100vh;
-  grid-area: menu;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--background);
-  text-align: center;
-  letter-spacing: 0.2rem;
-
-  .a_01 {
-    padding: 3.2rem 0;
+  .menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--background);
+    text-align: center;
+    letter-spacing: 0.2rem;
+    border-bottom: 1px solid var(--border);
+    .a_01 {
+      padding: 3.2rem 0;
+      width: 20rem;
+      height: 7.7rem;
+      &:hover {
+        padding: 2.5rem 0;
+        transition: all 0.2s;
+        font-size: 2rem;
+        background: var(--orange_01);
+      }
+    }
+  }
+  .a_02 {
+    padding: 1.9rem;
     width: 20rem;
     height: 7.7rem;
     &:hover {
-      padding: 2.5rem 0;
+      padding: 1.8rem 0;
       transition: all 0.2s;
       font-size: 2rem;
       background: var(--orange_01);
     }
   }
-}
-.a_02 {
-  padding: 1.9rem;
-  width: 20rem;
-  height: 7.7rem;
-  &:hover {
-    padding: 1.8rem 0;
-    transition: all 0.2s;
-    font-size: 2rem;
-    background: var(--orange_01);
+  .img {
+    grid-area: img;
+    height: 23.1rem;
+    background: url(../img/img_02.jpg) center;
+    background-size: cover;
+  }
+  .contact {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    h3 {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    div {
+      margin: 0.5rem 1rem;
+      height: 4rem;
+
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      font-size: 1.6rem;
+      padding: 2rem 0.8rem;
+      &:hover {
+        background: var(--border);
+        font-size: 1.8rem;
+        transition: all 0.2;
+        border-radius: 0.5rem;
+        i {
+          color: var(--orange_01);
+        }
+      }
+      a {
+        margin-left: 0.5rem;
+      }
+    }
   }
 }

@@ -65,10 +65,10 @@ img {
 
 .grid-container {
   display: grid;
-  grid: "menu header" auto "menu coco" "menu coco"/20rem auto;
+  grid: "menu header" 7.7rem "menu img" auto "contact coco" auto/20rem auto;
 }
-
-header {
+.grid-container header {
+  height: 7.7rem;
   grid-area: header;
   display: flex;
   flex-direction: column;
@@ -76,39 +76,39 @@ header {
   background: linear-gradient(to right, var(--orange_01), var(--orange_02));
   font-family: var(--font-title);
 }
-header div {
+.grid-container header div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header div h2 {
+.grid-container header div h2 {
   letter-spacing: 1rem;
   margin-left: 2rem;
   font-weight: 300;
   font-size: 4rem;
   color: white;
 }
-header div span {
+.grid-container header div span {
   margin-right: 1rem;
 }
-header div span button {
+.grid-container header div span button {
   margin: 0 0.5rem;
   height: 3rem;
   width: 11rem;
   border: none;
   border-radius: 12%;
-  background: var(--orange_02);
+  background: none;
   font-size: 2rem;
 }
-header div span button:hover {
-  background: #f1c40f;
+.grid-container header div span button:hover {
+  text-decoration: underline;
+  background: none;
 }
-header div span button a:hover {
-  color: white;
+.grid-container header div span button a:hover {
+  transition: all 0.2;
+  font-size: 2.2rem;
 }
-
-.menu {
-  min-height: 100vh;
+.grid-container .menu {
   grid-area: menu;
   display: flex;
   flex-direction: column;
@@ -116,29 +116,66 @@ header div span button a:hover {
   background: var(--background);
   text-align: center;
   letter-spacing: 0.2rem;
+  border-bottom: 1px solid var(--border);
 }
-.menu .a_01 {
+.grid-container .menu .a_01 {
   padding: 3.2rem 0;
   width: 20rem;
   height: 7.7rem;
 }
-.menu .a_01:hover {
+.grid-container .menu .a_01:hover {
   padding: 2.5rem 0;
   transition: all 0.2s;
   font-size: 2rem;
   background: var(--orange_01);
 }
-
-.a_02 {
+.grid-container .a_02 {
   padding: 1.9rem;
   width: 20rem;
   height: 7.7rem;
 }
-.a_02:hover {
+.grid-container .a_02:hover {
   padding: 1.8rem 0;
   transition: all 0.2s;
   font-size: 2rem;
   background: var(--orange_01);
+}
+.grid-container .img {
+  grid-area: img;
+  height: 23.1rem;
+  background: url(../img/img_02.jpg) center;
+  background-size: cover;
+}
+.grid-container .contact {
+  grid-area: contact;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+}
+.grid-container .contact h3 {
+  text-align: center;
+  margin-top: 2rem;
+}
+.grid-container .contact div {
+  margin: 0.5rem 1rem;
+  height: 4rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 2rem 0.8rem;
+}
+.grid-container .contact div:hover {
+  background: var(--border);
+  font-size: 1.8rem;
+  transition: all 0.2;
+  border-radius: 0.5rem;
+}
+.grid-container .contact div:hover i {
+  color: var(--orange_01);
+}
+.grid-container .contact div a {
+  margin-left: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

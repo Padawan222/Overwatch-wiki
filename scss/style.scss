@@ -8,7 +8,11 @@
   grid:
     "menu header" 7.7rem
     "menu img" auto
-    "contact coco" auto
+    "contact h1" auto
+    "avis coco" auto
+    "discord coco" auto
+    "contact_02 coco"
+    "footer coco" auto
     / 20rem auto;
 
   header {
@@ -55,21 +59,34 @@
       }
     }
   }
-
+  .menu,
+  .contact,
+  .avis,
+  .contact_02,
+  footer {
+    /*   background: linear-gradient(to right, #011725, #38b9fe, #011725); */
+    background: linear-gradient(
+      to right,
+      var(--orange_01),
+      var(--orange_02),
+      var(--orange_01)
+    );
+  }
   .menu {
     grid-area: menu;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--background);
+    /* background: var(--background); */
     text-align: center;
     letter-spacing: 0.2rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #011725;
     .a_01 {
       padding: 3.2rem 0;
       width: 20rem;
       height: 7.7rem;
       &:hover {
+        color: white;
         padding: 2.5rem 0;
         transition: all 0.2s;
         font-size: 2rem;
@@ -82,6 +99,7 @@
     width: 20rem;
     height: 7.7rem;
     &:hover {
+      color: white;
       padding: 1.8rem 0;
       transition: all 0.2s;
       font-size: 2rem;
@@ -90,20 +108,21 @@
   }
   .img {
     grid-area: img;
-    height: 23.1rem;
+    height: 46.3rem;
     background: url(../img/img_02.jpg) center;
     background-size: cover;
   }
   .contact {
     grid-area: contact;
+    border-bottom: 1px solid #011725;
     display: flex;
     flex-direction: column;
-    background: var(--background);
+    /* background: var(--background); */
     h3 {
       text-align: center;
       margin-top: 2rem;
     }
-    div {
+    ul {
       margin: 0.5rem 1rem;
       height: 4rem;
 
@@ -113,11 +132,11 @@
       font-size: 1.6rem;
       padding: 2rem 0.8rem;
       &:hover {
-        background: var(--border);
+        background: white;
         font-size: 1.8rem;
         transition: all 0.2;
         border-radius: 0.5rem;
-        i {
+        li {
           color: var(--orange_01);
         }
       }
@@ -125,5 +144,99 @@
         margin-left: 0.5rem;
       }
     }
+  }
+  .avis {
+    /* background: var(--background); */
+    grid-area: avis;
+    text-align: center;
+    border-bottom: 1px solid #011725;
+    ::placeholder {
+      color: #011725;
+    }
+    input {
+      background: none;
+      margin-bottom: 2rem;
+      border: 0;
+      border-bottom: 1px solid #333;
+      outline: 0;
+      &:hover {
+        font-size: 1.6rem;
+      }
+    }
+    button {
+      letter-spacing: 0.2rem;
+      font-size: 1.6rem;
+      height: 2rem;
+      width: 8rem;
+      color: #333;
+      border: 0;
+      background: none;
+      border-radius: 5rem;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      &:hover {
+        background: var(--orange_01);
+        color: white;
+      }
+    }
+  }
+
+  .contact_02 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    grid-area: contact_02;
+    /* background: var(--background); */
+    h3 {
+      margin: 5rem 0 0.5rem 0;
+      text-align: center;
+      margin-top: 0;
+      font-weight: 400;
+    }
+    div {
+      text-align: center;
+      p {
+        margin: 0.5rem 0 0.5rem 0;
+      }
+      .p_01 {
+        text-decoration: underline;
+        cursor: pointer;
+        &:hover {
+          font-size: 1.8rem;
+          color: #011725;
+        }
+      }
+    }
+  }
+  .h1 {
+    grid-area: h1;
+
+    height: 10rem;
+    background: linear-gradient(to right, #011725, #38b9fe, #011725);
+    color: white;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5rem;
+    font-family: var(--font-title);
+    h1 {
+      margin-left: 79.5rem;
+      font-size: 5rem;
+      span {
+        font-size: 6.5rem;
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+    grid-area: footer;
+    height: 11.3rem;
+    /*     background: linear-gradient(to right, var(--orange_01), var(--orange_02)); */
+    color: #011725;
   }
 }

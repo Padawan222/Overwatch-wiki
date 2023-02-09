@@ -21,6 +21,11 @@ h6 {
   margin: 1rem 0 2rem 0;
 }
 
+h3 {
+  font-weight: 400;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
 ul {
   list-style: none;
 }
@@ -65,7 +70,7 @@ img {
 
 .grid-container {
   display: grid;
-  grid: "menu header" 7.7rem "menu img" auto "contact coco" auto/20rem auto;
+  grid: "menu header" 7.7rem "menu img" auto "contact h1" auto "avis coco" auto "discord coco" auto "contact_02 coco" "footer coco" auto/20rem auto;
 }
 .grid-container header {
   height: 7.7rem;
@@ -108,15 +113,23 @@ img {
   transition: all 0.2;
   font-size: 2.2rem;
 }
+.grid-container .menu,
+.grid-container .contact,
+.grid-container .avis,
+.grid-container .contact_02,
+.grid-container footer {
+  /*   background: linear-gradient(to right, #011725, #38b9fe, #011725); */
+  background: linear-gradient(to right, var(--orange_01), var(--orange_02), var(--orange_01));
+}
 .grid-container .menu {
   grid-area: menu;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--background);
+  /* background: var(--background); */
   text-align: center;
   letter-spacing: 0.2rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #011725;
 }
 .grid-container .menu .a_01 {
   padding: 3.2rem 0;
@@ -124,6 +137,7 @@ img {
   height: 7.7rem;
 }
 .grid-container .menu .a_01:hover {
+  color: white;
   padding: 2.5rem 0;
   transition: all 0.2s;
   font-size: 2rem;
@@ -135,6 +149,7 @@ img {
   height: 7.7rem;
 }
 .grid-container .a_02:hover {
+  color: white;
   padding: 1.8rem 0;
   transition: all 0.2s;
   font-size: 2rem;
@@ -142,21 +157,22 @@ img {
 }
 .grid-container .img {
   grid-area: img;
-  height: 23.1rem;
+  height: 46.3rem;
   background: url(../img/img_02.jpg) center;
   background-size: cover;
 }
 .grid-container .contact {
   grid-area: contact;
+  border-bottom: 1px solid #011725;
   display: flex;
   flex-direction: column;
-  background: var(--background);
+  /* background: var(--background); */
 }
 .grid-container .contact h3 {
   text-align: center;
   margin-top: 2rem;
 }
-.grid-container .contact div {
+.grid-container .contact ul {
   margin: 0.5rem 1rem;
   height: 4rem;
   display: flex;
@@ -165,17 +181,109 @@ img {
   font-size: 1.6rem;
   padding: 2rem 0.8rem;
 }
-.grid-container .contact div:hover {
-  background: var(--border);
+.grid-container .contact ul:hover {
+  background: white;
   font-size: 1.8rem;
   transition: all 0.2;
   border-radius: 0.5rem;
 }
-.grid-container .contact div:hover i {
+.grid-container .contact ul:hover li {
   color: var(--orange_01);
 }
-.grid-container .contact div a {
+.grid-container .contact ul a {
   margin-left: 0.5rem;
+}
+.grid-container .avis {
+  /* background: var(--background); */
+  grid-area: avis;
+  text-align: center;
+  border-bottom: 1px solid #011725;
+}
+.grid-container .avis ::placeholder {
+  color: #011725;
+}
+.grid-container .avis input {
+  background: none;
+  margin-bottom: 2rem;
+  border: 0;
+  border-bottom: 1px solid #333;
+  outline: 0;
+}
+.grid-container .avis input:hover {
+  font-size: 1.6rem;
+}
+.grid-container .avis button {
+  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+  height: 2rem;
+  width: 8rem;
+  color: #333;
+  border: 0;
+  background: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.grid-container .avis button:hover {
+  background: var(--orange_01);
+  color: white;
+}
+.grid-container .contact_02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  grid-area: contact_02;
+  /* background: var(--background); */
+}
+.grid-container .contact_02 h3 {
+  margin: 5rem 0 0.5rem 0;
+  text-align: center;
+  margin-top: 0;
+  font-weight: 400;
+}
+.grid-container .contact_02 div {
+  text-align: center;
+}
+.grid-container .contact_02 div p {
+  margin: 0.5rem 0 0.5rem 0;
+}
+.grid-container .contact_02 div .p_01 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.grid-container .contact_02 div .p_01:hover {
+  font-size: 1.8rem;
+  color: #011725;
+}
+.grid-container .h1 {
+  grid-area: h1;
+  height: 10rem;
+  background: linear-gradient(to right, #011725, #38b9fe, #011725);
+  color: white;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5rem;
+  font-family: var(--font-title);
+}
+.grid-container .h1 h1 {
+  margin-left: 79.5rem;
+  font-size: 5rem;
+}
+.grid-container .h1 h1 span {
+  font-size: 6.5rem;
+}
+.grid-container footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem;
+  text-align: center;
+  grid-area: footer;
+  height: 11.3rem;
+  /*     background: linear-gradient(to right, var(--orange_01), var(--orange_02)); */
+  color: #011725;
 }
 
 /*# sourceMappingURL=style.css.map */
